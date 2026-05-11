@@ -50,6 +50,6 @@ namespace Proy1Progra3
             lista = lista.OrderByDescending(x => x.Vendidos).ToList();
 
             Mostrar();
-        }
+        }   
     }
 }
