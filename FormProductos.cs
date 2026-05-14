@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Proy1Progra3
@@ -71,6 +72,32 @@ namespace Proy1Progra3
             textPrecioVenta.Clear();
 
             textExistencia.Clear();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Producto producto = lista.FirstOrDefault(x => x.Codigo == textCodigo.Text);
+
+            if (producto != null)
+            {
+                producto.Nombre = textNombre.Text;
+                producto.Marca = textMarca.Text;
+                producto.PrecioCompra = Convert.ToDouble(textPrecioCompra.Text);
+                producto.PrecioVenta = Convert.ToDouble(textPrecioVenta.Text);
+                producto.Existencia = Convert.ToInt32(textExistencia.Text);
+
+                archivo.Guardar(lista);
+
+                Mostrar();
+
+                Limpiar();
+
+                MessageBox.Show("Producto actualizado correctamente");
+            }
+            else
+            {
+                MessageBox.Show("No se encontró un producto con ese código");
+            }
         }
     }
 }
