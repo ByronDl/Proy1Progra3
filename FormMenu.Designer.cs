@@ -31,6 +31,7 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnPOS = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
+            this.btnFacturas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProductos
@@ -63,11 +64,22 @@
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
+            // btnFacturas
+            // 
+            this.btnFacturas.Location = new System.Drawing.Point(43, 239);
+            this.btnFacturas.Name = "btnFacturas";
+            this.btnFacturas.Size = new System.Drawing.Size(199, 39);
+            this.btnFacturas.TabIndex = 3;
+            this.btnFacturas.Text = "Facturas";
+            this.btnFacturas.UseVisualStyleBackColor = true;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnFacturas);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnPOS);
             this.Controls.Add(this.btnProductos);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnPOS;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnFacturas;
     }
 }

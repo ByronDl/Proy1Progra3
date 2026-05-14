@@ -30,5 +30,12 @@ namespace Proy1Progra3
 
             f.Show();
         }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+            FormFacturas f = new FormFacturas();
+
+            f.Show();
+        }
     }
 }
